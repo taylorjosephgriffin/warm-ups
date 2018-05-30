@@ -1,34 +1,22 @@
 let stopWatch = {
   timeLimit: 10,
-  timeElapsed: 10,
-  isStarted: true
+  timeElapsed: 9,
+  isStarted: false
 }
 
 function renderStopWatch(stopWatch) {
-  let $container = document.createElement('div')
-  let $timeElapsed = document.createElement('h1')
-  let $button = document.createElement('button')
+  const $container = document.createElement('div')
+  const $timeElapsed = document.createElement('h1')
+  const $button = document.createElement('button')
 
-  $timeElapsed.innerHTML = stopWatch.timeElapsed
-  if (stopWatch.timeLimit === stopWatch.timeElapsed && stopWatch.isStarted) {
-    $button.innerHTML = 'Reset'
-  }
-  else if (!stopWatch.isStarted) {
-    $button.innerHTML = 'Start'
-  }
-  else if (stopWatch.timeLimit !== stopWatch.timeElapsed && stopWatch.isStarted) {
-    $button.innerHTML = 'Pause'
-  }
+  stopWatch.timeLimit === stopWatch.timeElapsed ? $button.textContent = 'Reset' : false
+  stopWatch.isStarted === false && stopWatch.timeLimit !== stopWatch.timeElapsed ? $button.textContent = 'Start' : false
+  stopWatch.timeLimit !== stopWatch.timeElapsed && stopWatch.isStarted ? $button.textContent = 'Pause' : false
 
-  if (stopWatch.timeLimit === stopWatch.timeElapsed && stopWatch.isStarted) {
-    $timeElapsed.className = 'time-elapsed is-expired'
-  }
-  else {
-    $timeElapsed.className = 'time-elapsed'
-  }
+  stopWatch.timeLimit === stopWatch.timeElapsed ? $timeElapsed.className = 'time-elapse is-expired' : $timeElapsed.className = 'time-elapsed'
 
   $container.appendChild($timeElapsed)
   $container.appendChild($button)
 
-  console.log($container)
+  return $container
 }
