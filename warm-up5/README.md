@@ -1,6 +1,6 @@
 Define functions to create and return the following DOM trees.
 
-renderDiv()
+'renderDiv()
 <div></div>
 
 renderSpan()
@@ -57,4 +57,4 @@ renderForm()
  <button type="submit" class="btn btn-primary">
   Submit
  </button>
-</form>
+</form>'
