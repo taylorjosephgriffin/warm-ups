@@ -1,1 +1,1 @@
-![screengrab of instructions](https://github.com/taylorjosephgriffin/warm-ups/blob/master/warm-ups5/warm-up-instructions/Untitled.jpeg?raw=true)
+![screengrab of instructions](https://raw.githubusercontent.com/taylorjosephgriffin/warm-ups/master/warm-up5/warm-up-instructions/Untitled.jpeg?raw=true)
